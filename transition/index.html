@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>过渡色</title>
+    <style>
+      .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url(http://book.jirengu.com/jirengu-inc/js-works/css3/bg.jpg) center center no-repeat;
+        background-size: cover;
+      }
+      .cover::before,.cover::after {
+        content: "";
+        display: block;
+        width: 50%;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+      }
+      .cover:before {
+        left: 0;
+        background: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(255, 160, 160));
+      }
+      .cover::after {
+        right: 0;
+        background: linear-gradient(to bottom right, rgb(255, 160, 160), rgba(255,0,0,0));
+      }
+    </style>
+</head>
+<body>
+    <div class="cover"></div>
+</body>
+</html>

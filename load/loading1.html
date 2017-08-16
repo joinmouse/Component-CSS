@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>loading</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background: rgb(13,206,203)
+      }
+      .loading,
+      .loading::before,
+      .loading::after {
+        background: #fff;
+        width: 10px;
+        height: 40px;
+        animation: load 1s infinite ease-in-out;
+      }
+
+      .loading {
+        margin: 100px auto;
+        position: relative;
+        animation-delay: 0.2s;
+      }
+      .loading::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+      }
+      .loading::after {
+        content: "";
+        position: absolute;
+        left: 15px;
+        animation-delay: 0.4s;
+      }
+
+      @keyframes load {
+        0%,100% {
+          box-shadow: 0 0 #fff;
+          height: 40px;
+        }
+        10% {
+          box-shadow: 0 -20px #fff;
+          height: 50px;
+        }
+      }
+    </style>
+</head>
+<body>
+  <main>
+    <div class="loading"></div>
+  </main>
+  
+  <footer>
+  </footer>
+</body>
+</html>
